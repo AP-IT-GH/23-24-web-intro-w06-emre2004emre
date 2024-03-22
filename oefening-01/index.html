@@ -62,9 +62,9 @@
 <div class="container">
   <div class="row">
 
-    <main>
+    <main class="col-md-9 pe-3">
 
-      <section>
+      <section class="row">
 
         <article class="">
           <h2 class="">contact</h2>
@@ -73,8 +73,34 @@
 
         <hr>
 
-        <form>
-          
+        <form action="#" method="post">
+
+          <fieldset class="row g-3 mb-3">
+
+            <legend>gegevens</legend>
+
+            <div class="col-md-6">
+              <label for="Voornaam">Voornaam</label><br>
+              <input type="text" id="Voornaam" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="Achternaam">Achternaam</label><br>
+              <input type="text" id="Achternaam" required>
+            </div>
+
+            <div class="col-6">
+              <label for="Mobiel">Mobiel</label><br>
+              <input type="tel" id="Mobiel" placeholder="489 39 33 66">
+            </div>
+
+            <div class="col-6">
+              <label for="Geboortedatum">Geboortedatum</label>
+              <input type="date" id="Geboortedatum">
+            </div>
+
+          </fieldset>
+
         </form>
 
       </section>
