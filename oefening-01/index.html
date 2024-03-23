@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap CSS icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" defer>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- JavaScript: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- eigen geschreven css voor jouw html-bestand -->
@@ -17,39 +17,52 @@
 </head>
 
 <body class="p-3 m-0 border-0 bd-example">
+
 <nav class="navbar navbar-expand-md bg-light">
+
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./assets/coffee.png" alt="Koffie & co" width="100" height="100">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <a class="navbar-brand" href="#"><img src="./assets/coffee.png" alt="Koffie & co" width="100" height="100"></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">home</a>
+          <a class="nav-link active" aria-current="page" href="index.html">home</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">shop</a>
+          <a class="nav-link" href="shop.html">shop</a>
         </li>
+
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            dropdown
-          </a>
+
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">dropdown</a>
+
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">subpagina 1</a></li>
             <li><a class="dropdown-item" href="#">subpagina 2</a></li>
             <li><a class="dropdown-item" href="#">subpagina 3</a></li>
           </ul>
+
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#">contact</a>
         </li>
+
       </ul>
+
       <form class="d-flex" role="search">
+
         <input class="form-control me-2" type="search" placeholder="zoeken" aria-label="Search">
         <button class="btn btn-sm btn-outline-secondary" type="submit">zoeken</button>
+
       </form>
     </div>
   </div>
@@ -64,10 +77,10 @@
 
     <main class="col-md-9 pe-3">
 
-      <section class="row">
+      <section id="contact" class="row">
 
-        <article class="">
-          <h2 class="">contact</h2>
+        <article class="col-12 mb-3">
+          <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
           <p>Vul het registratieformulier in.<br>Velden met een * zijn verplicht.</p>
         </article>
 
@@ -77,29 +90,134 @@
 
           <fieldset class="row g-3 mb-3">
 
-            <legend>gegevens</legend>
+            <legend class="text-uppercase fs-6 fw-bolder pt-3">gegevens</legend>
 
             <div class="col-md-6">
-              <label for="Voornaam">Voornaam</label><br>
-              <input type="text" id="Voornaam" required>
+              <label for="Voornaam" class="form-label">Voornaam <span>*</span></label>
+              <input type="text" class="form-control" id="Voornaam" required>
             </div>
 
             <div class="col-md-6">
-              <label for="Achternaam">Achternaam</label><br>
-              <input type="text" id="Achternaam" required>
+              <label for="Achternaam" class="form-label">Achternaam <span>*</span></label>
+              <input type="text" class="form-control" id="Achternaam" required>
             </div>
 
             <div class="col-6">
-              <label for="Mobiel">Mobiel</label><br>
-              <input type="tel" id="Mobiel" placeholder="489 39 33 66">
+              <label for="Mobiel" class="form-label">Mobiel</label>
+              <input type="tel" class="form-control" id="Mobiel" placeholder="489 39 33 66">
             </div>
 
             <div class="col-6">
-              <label for="Geboortedatum">Geboortedatum</label>
-              <input type="date" id="Geboortedatum">
+              <label for="Geboortedatum"  class="form-label">Geboortedatum</label>
+              <input type="date" class="form-control" id="Geboortedatum">
             </div>
 
           </fieldset>
+
+          <fieldset class="row g-3 mb-3 mt-3">
+
+            <legend class="text-uppercase fs-6 fw-bolder pt-3">accountgegevens</legend>
+
+            <div class="col-12">
+              <label for="E-mail" class="form-label">E-mail <span>*</span></label>
+              <input type="email" class="form-control" id="E-mail" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="Paswoord" class="form-label">Paswoord <span>*</span></label>
+              <input type="password" id="Paswoord" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="Bevestig" class="form-label">Bevestig Paswoord <span>*</span></label>
+              <input type="password" class="form-control" id="Bevestig" required>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="row g-3 mb-3 mt-3">
+
+            <legend class="text-uppercase fs-6 fw-bolder pt-3">adresgegevens</legend>
+
+            <div class="col-12">
+              <label for="Adres" class="form-label">Adres <span>*</span></label>
+              <input type="text" class="form-control" id="Adres" required>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <label for="Postcode" class="form-label">Postcode <span>*</span></label>
+              <input type="text" class="form-control" id="Postcode" required>
+            </div>
+
+            <div class="col-6 col-md-5">
+              <label for="Stad" class="form-label">Stad <span>*</span></label>
+              <input type="text" class="form-control" id="Stad" required>
+            </div>
+
+            <div class="col-md-4">
+              <label for="KiesEenLand" class="form-label">Kies Een Land <span>*</span></label>
+
+              <select class="form-select" id="KiesEenLand">
+
+                <option value="BE" selected>Belgie</option>
+                <option value="DE">Duitsland</option>
+                <option value="FR">Frankrijk</option>
+                <option value="LU">Luxemburg</option>
+                <option value="NL">Nederland</option>
+                <option value="UK">Verenigd Konikrijk</option>
+
+              </select>
+
+            </div>
+
+          </fieldset>
+
+          <fieldset class="row g-3 mb-3 mt-3">
+
+            <legend class="text-uppercase fs-6 fw-bolder pt-3">koffie-achtergrond</legend>
+
+            <div class="col-6">
+
+              <label for="IkKoop" class="form-label">Ik koop</label>
+
+              <select class="form-select" id="IkKoop">
+
+                <option value="Bonen" selected>KoffieBonnen</option>
+                <option value="Gemalen">Gemalen</option>
+                <option value="Oplos">Oplos</option>
+
+              </select>
+
+            </div>
+
+            <div class="col-6">
+
+            <label for="Fan" class="form-label">En ben fan van het merk</label>  
+
+            <select class="form-select" id="Fan">
+
+              <option value="Illy" selected>Illy</option>
+              <option value="Lavazza">Lavazza</option>
+              <option value="Starbucks">Starbucks</option>
+              <option value="Gran Maestro Italiano">Gran Maestro Italiano</option>
+              <option value="Celeste d'Oro">Celeste d'Oro</option>
+
+            </select>
+
+            </div>
+
+            <div class="col">
+
+              <label for="TeVreden" class="form-label">Hoe tevreden ben je ban ons?</label>
+              <input type="range" class="form-range" min="0" max="10" step="1" id="TeVreden">
+
+            </div>
+
+          </fieldset>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Verzenden</button>
+          </div>
 
         </form>
 
@@ -108,31 +226,43 @@
     </main> 
 
     <aside class="col-md-3">
+
       <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
+
       <p>COFFEE shop<br>
         email <a href="mailto:mail@ap-coffeeshop.be">mail@ap-coffeeshop.be</a><br>
         phone +32 123 / 45 67 89</p>
+
       <ul class="list-inline socials">
+
         <li class="list-inline-item">
+          
           <a href="https://www.youtube.com" target="_blank">
-            <i class="bi bi-youtube koffiebruin fs-3"></i>
-          </a>
+            <i class="bi bi-youtube koffiebruin fs-3"></i></a>
+
         </li>
+
         <li class="list-inline-item">
+
           <a href="https://www.instagram.com" target="_blank">
-            <i class="bi bi-instagram koffiebruin fs-3"></i>
-          </a>
+            <i class="bi bi-instagram koffiebruin fs-3"></i></a>
+
         </li>
+
         <li class="list-inline-item">
+
           <a href="https://www.facebook.com" target="_blank">
-            <i class="bi bi-facebook koffiebruin fs-3"></i>
-          </a>
+            <i class="bi bi-facebook koffiebruin fs-3"></i> </a>
+          
         </li>
+
         <li class="list-inline-item">
+
           <a href="https://twitter.com/" target="_blank">
-            <i class="bi bi-twitter koffiebruin fs-3"></i>
-          </a>
+            <i class="bi bi-twitter koffiebruin fs-3"></i> </a>
+
         </li>
+
       </ul>
     </aside>
 
